@@ -1,0 +1,106 @@
+{
+    "project_name": "yemen-market-price-intelligence",
+    "model_family": "Random Forest (Bagging)",
+    "timestamp": "2026-10-22 14:22:00 UTC",
+    "data_source": "United Nations World Food Programme (WFP) / Humanitarian Data Exchange (HDX)",
+    "dataset_url": "https://data.humdata.org/dataset/wfp-food-prices-for-yemen",
+    "temporal_split_protocol": {
+        "cutoff_date": "2023-01-01",
+        "train_samples": 45096,
+        "test_samples": 14917,
+        "train_proportion": 0.7514,
+        "test_proportion": 0.2486,
+        "train_date_range": [
+            "2009-03-15",
+            "2022-12-15"
+        ],
+        "test_date_range": [
+            "2023-01-15",
+            "2026-09-15"
+        ]
+    },
+    "feature_schema": {
+        "numeric_features": [
+            "year",
+            "month",
+            "quarter",
+            "day",
+            "dayofweek",
+            "month_sin",
+            "month_cos",
+            "trend_step",
+            "latitude",
+            "longitude",
+            "market_cluster"
+        ],
+        "categorical_features": [
+            "admin1",
+            "admin2",
+            "market",
+            "category",
+            "commodity",
+            "unit",
+            "pricetype"
+        ],
+        "total_raw_features": 18,
+        "encoded_feature_dimensions": 130,
+        "target_variable": "log_price",
+        "target_transformation": "log1p(price_YER)",
+        "evaluation_inversion": "expm1(predicted_log_price)"
+    },
+    "test_metrics_summary": {
+        "mae_yer": 3895.2,
+        "rmse_yer": 18046.59,
+        "log_r2_score": 0.9591
+    },
+    "benchmark_comparison": [
+        {
+            "Model": "Ridge (L2 Linear)",
+            "MAE (YER)": 5832.81,
+            "RMSE (YER)": 22312.1,
+            "Log R² Score": 0.9286,
+            "Fit Time (s)": 0.36
+        },
+        {
+            "Model": "Random Forest (Bagging)",
+            "MAE (YER)": 3895.2,
+            "RMSE (YER)": 18046.59,
+            "Log R² Score": 0.9591,
+            "Fit Time (s)": 53.91
+        },
+        {
+            "Model": "LightGBM (Boosting)",
+            "MAE (YER)": 4401.45,
+            "RMSE (YER)": 19611.14,
+            "Log R² Score": 0.9592,
+            "Fit Time (s)": 1.59
+        }
+    ],
+    "unsupervised_clustering": {
+        "algorithm": "K-Means",
+        "optimal_k": 3,
+        "silhouette_score": 0.6629,
+        "inertia": 17.94,
+        "pca_variance_explained": {
+            "pc1": 0.7795,
+            "pc2": 0.1819,
+            "total": 0.9614
+        }
+    },
+    "anomaly_detection": {
+        "algorithm": "IsolationForest",
+        "contamination": 0.03,
+        "detected_anomalies_count": 1800,
+        "percentage": 3.0
+    },
+    "runtime_environment": {
+        "python_version": "3.11+",
+        "frameworks": {
+            "pandas": "2.2+",
+            "scikit-learn": "1.5+",
+            "lightgbm": "4.5+",
+            "joblib": "1.4+"
+        },
+        "random_state": 42
+    }
+}

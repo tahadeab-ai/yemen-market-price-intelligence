@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large raw data files (downloadable dynamically via script/notebook)
+data/raw/*.csv
+!data/raw/README.md
+
+# Large serialized models (>50MB, reproducible via notebook)
+*.joblib
+!artifacts/metadata.json
