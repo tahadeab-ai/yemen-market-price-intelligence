@@ -146,7 +146,7 @@ Open the notebook directly in Colab:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/tahadeab60/yemen-market-price-intelligence.git
+git clone https://github.com/tahadeab-ai/yemen-market-price-intelligence.git
 cd yemen-market-price-intelligence
 
 # 2. Create and activate a virtual environment

@@ -31,7 +31,7 @@
 ---
 
 💻 **المشروع متاح بالكامل ومفتوح المصدر على GitHub**:
-https://github.com/tahadeab60/yemen-market-price-intelligence
+https://github.com/tahadeab-ai/yemen-market-price-intelligence
 
 يسعدني جداً سماع آرائكم وملاحظاتكم لتطوير حلول مبنية على البيانات تخدم مجتمعاتنا والقطاع الإنساني في اليمن! 🇾🇪✨
 
