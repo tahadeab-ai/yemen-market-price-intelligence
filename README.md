@@ -135,7 +135,7 @@ yemen-market-price-intelligence/
 
 ### Option 1: Run in Google Colab (1-Click Execution)
 Open the notebook directly in Colab:
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1lv1Luwh1FB95G-qqsmTQsVYsocHs21Yj)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tahadeab-ai/yemen-market-price-intelligence/blob/main/notebooks/yemen_market_forecasting.ipynb)
 
 1. Select **Runtime** > **Run all**.
 2. The notebook automatically fetches the live UN WFP dataset from the HDX endpoints, trains all models, and exports the figures and artifacts into the local Colab filesystem.
